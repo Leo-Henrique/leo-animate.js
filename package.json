@@ -30,9 +30,7 @@
         "leo-css-reset": "^1.0.0",
         "normalize.css": "^8.0.1",
         "rfs": "^9.0.6",
-        "vite": "^4.0.4"
-    },
-    "dependencies": {
+        "vite": "^4.0.4",
         "sass": "^1.57.1"
     }
 }
