@@ -30,20 +30,19 @@ $fontSizes: (
     body: 1.8rem,
 );
 $accentColors: (
-    primary: #00b2ff,
-    secondary: #ffdd35,
+    primary: #F0DB4F,
     success: #01cc88,
     warning: #ffc107,
     danger: #dc3545,
 );
 $variationsColors: (
-    primaryLight: lighten(map-get($accentColors, primary), 22%),
-    primaryDark: darken(map-get($accentColors, primary), 12%),
+    primaryLight: lighten(map-get($accentColors, primary), 10%),
+    primaryDark: #E3CC32,
     supportLight1: #fff,
     supportLight2: #e9f0f4,
     supportDark1: #000,
-    supportDark2: #171717,
-    supportDark3: #171823,
+    supportDark2: #0E0D05,
+    supportDark3: #1E1E1E,
 );
 
 // general

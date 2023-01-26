@@ -18,12 +18,14 @@ export default function App() {
             leo-animate.js
         </h1>
 
-        <a class="btn"
-        href="https://github.com/Leo-Henrique/leo-react-app"
-        target="_blank">
-            <span>${SVGGitHub()}</span>
+        <div class="btn">
+            <a class="btn__anchor"
+            href="https://github.com/Leo-Henrique/leo-react-app"
+            target="_blank">
+                <span>${SVGGitHub()}</span>
 
-            <span>Get Started</span>
-        </a>
+                <span>Get Started</span>
+            </a>
+        </div>
     `;
 }
