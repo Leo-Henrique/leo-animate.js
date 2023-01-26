@@ -1,0 +1,21 @@
+[data-animate] {
+    opacity: 0;
+    transform: translate3d(0, -15px, 0);
+    transition-property: opacity, transform;
+}
+[data-animate="fadeRight"] {
+    transform: translate3d(-15px, 0, 0);
+}
+[data-animate="fadeLeft"] {
+    transform: translate3d(15px, 0, 0);
+}
+[data-animate="fadeDown"] {
+    transform: translate3d(0, -15px, 0);
+}
+[data-animate="fadeUp"] {
+    transform: translate3d(0, 15px, 0);
+}
+[data-animate].--animated {
+    opacity: 1;
+    transform: none;
+}

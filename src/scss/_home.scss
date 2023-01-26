@@ -21,14 +21,21 @@ body {
             display: inline-block;
             padding: 2rem;
 
-            @include transition("button", opacity, transform);
-            @include state((
-                hover: (opacity: 0.6, transform: scale(1.02)),
-                active: (opacity: 0.4),
-            ));
+            @include desktop {
+                &:hover img {
+                    opacity: 0.7;
+                    box-shadow: 0 0 42px 24px transparentize(color("primary"), 0.8);
+                }
+            }
+            &:active img {
+                opacity: 0.4;
+            }
             @include breakpoint(sm) {
                 width: 180px;
             }
+        }
+        img {
+            @include transition("button", opacity, box-shadow);
         }
     }
     &__title {

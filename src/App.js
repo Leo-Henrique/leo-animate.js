@@ -1,10 +1,14 @@
 import "./scss/style.scss";
 import IMGJavaScript from "./assets/javascript.svg";
 import SVGGitHub from "./assets/svg-github";
+import LeoAnimate from "./lib/leoAnimate";
 
 export default function App() {
+    setTimeout(() => new LeoAnimate());
+
     return /*html*/ `
-        <div class="app__icon">
+        <div class="app__icon"
+        data-animate>
             <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
             target="_blank"
             rel="external noopener noreferrer">
@@ -14,11 +18,13 @@ export default function App() {
         </div>
 
         <h1 class="app__title"
-        translate="no">
+        translate="no"
+        data-animate="fadeRight">
             leo-animate.js
         </h1>
 
-        <div class="btn">
+        <div class="btn"
+        data-animate="fadeUp">
             <a class="btn__anchor"
             href="https://github.com/Leo-Henrique/leo-react-app"
             target="_blank">
