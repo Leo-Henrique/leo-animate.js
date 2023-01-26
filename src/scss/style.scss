@@ -11,8 +11,5 @@
 "leo-css-reset",
 "base/typography";
 
-// components / widgets
-@import "components/button";
-
-// pages specific styles
-@import "pages/home";
+// project
+@import "button", "home";
