@@ -1,0 +1,74 @@
+// global attribute generator with NO specified value
+@mixin leoA-globalAttrs {
+    $responsive: map-get($leoAnimate-global, "responsive");
+    $properties: map-get($leoAnimate-global, "properties");
+
+    [#{$leoA-attr}] {
+        @if type-of($properties) == "map" {
+            transition-property: map-keys($properties);
+
+            @each $property, $value in $properties {
+                #{$property}: $value;
+            }
+        } @else {
+            transition-property: $properties;
+        }
+    }
+    @if $responsive {
+        $sizes: map-get($leoAnimate-breakpoints, "sizes");
+
+        @each $breakpoint, $size in $sizes {
+                [#{#{$leoA-attr}}-#{$breakpoint}] {
+                    @extend [#{$leoA-attr}];
+                }
+        }
+    }
+}
+
+// global attribute generator with specified value
+@mixin leoA-generateAttrs($selector, $properties) {
+    #{$selector} {
+        @each $property, $value in $properties {
+            #{$property}: $value;
+        }
+    }
+}
+@mixin leoA-attrs {
+    @each $animation, $options in $leoAnimate {
+        @include leoA-generateAttrs(
+            "[#{$leoA-attr}='#{$animation}']",
+            map-get($options, "properties")
+        );
+    }
+
+    @each $animation, $options in $leoAnimate {
+        @if map-get($options, "responsive") {
+            $width: map-get($leoAnimate-breakpoints, "property");
+            $sizes: map-get($leoAnimate-breakpoints, "sizes");
+
+            @each $breakpoint, $size in $sizes {
+                @media (#{$width}: #{$size}) {
+                    @include leoA-generateAttrs(
+                        "[#{$leoA-attr}-#{$breakpoint}='#{$animation}']",
+                        map-get($options, "properties")
+                    );
+                }
+            }
+        }
+    }
+}
+
+// generator of the animated class
+@mixin leoA-animatedClass {
+    $properties: map-get($leoAnimate-global, "properties");
+
+    .#{$leoA-animated} {
+        @each $property, $v in $properties {
+            #{$property}: initial;
+        }
+    }
+}
+
+@include leoA-globalAttrs;
+@include leoA-attrs;
+@include leoA-animatedClass;
