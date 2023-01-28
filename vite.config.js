@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 const packageName = "leoAnimate";
 
 export default defineConfig({
+    root: "demo",
     base: `/${packageName}.js`,
     build: {
         rollupOptions: {

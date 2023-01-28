@@ -1,7 +1,7 @@
 import "./scss/style.scss";
 import IMGJavaScript from "./assets/javascript.svg";
 import SVGGitHub from "./assets/svg-github";
-import LeoAnimate from "../lib/leoAnimate";
+import LeoAnimate from "../../lib/leoAnimate";
 
 export default function App() {
     setTimeout(() => new LeoAnimate());
