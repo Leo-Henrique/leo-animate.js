@@ -3,7 +3,6 @@ const packageName = "leoAnimate";
 
 export default defineConfig({
     root: "demo",
-    base: `/${packageName}.js`,
     build: {
         outDir: "../dist",
         rollupOptions: {
