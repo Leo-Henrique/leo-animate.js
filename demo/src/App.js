@@ -29,7 +29,7 @@ export default function App() {
         data-animate="fadeUp"
         data-animate-md="fadeDown">
             <a class="btn__anchor"
-            href="https://github.com/Leo-Henrique/leo-react-app"
+            href="https://github.com/Leo-Henrique/leo-animate.js"
             target="_blank">
                 <span>${SVGGitHub()}</span>
 
