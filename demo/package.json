@@ -1,0 +1,20 @@
+{
+    "name": "demo",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "start": "vite --open",
+        "build": "vite build",
+        "preview": "vite preview --open"
+    },
+    "dependencies": {
+        "leo-css-reset": "^1.0.0",
+        "normalize.css": "^8.0.1",
+        "rfs": "^9.0.6"
+    },
+    "devDependencies": {
+        "sass": "^1.57.1",
+        "vite": "^4.0.4"
+    }
+}
