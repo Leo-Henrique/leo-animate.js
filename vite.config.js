@@ -5,6 +5,7 @@ export default defineConfig({
     root: "demo",
     base: `/${packageName}.js`,
     build: {
+        outDir: "../dist",
         rollupOptions: {
             output: {
                 assetFileNames: (assetInfo) => {
@@ -16,7 +17,7 @@ export default defineConfig({
         },
         lib: {
             entry: {
-                leoAnimate: `lib/${packageName}.js`,
+                leoAnimate: `../lib/${packageName}.js`,
             },
             formats: ["es"],
         },
