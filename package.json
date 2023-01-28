@@ -3,13 +3,9 @@
     "version": "1.0.0",
     "description": "Input animation and scrolling with the Intersection Observer API.",
     "type": "module",
-    "main": "dist/leo-animate.js",
+    "files": ["./dist"],
+    "module": "./dist/leoAnimate.js",
     "license": "MIT",
-    "scripts": {
-        "start": "vite --open",
-        "build": "vite build",
-        "preview": "vite preview --open"
-    },
     "keywords": [
         "animations",
         "JavaScript animations",
@@ -27,9 +23,6 @@
         "url": "https://github.com/leo-henrique/leo-animate.js.git"
     },
     "devDependencies": {
-        "leo-css-reset": "^1.0.0",
-        "normalize.css": "^8.0.1",
-        "rfs": "^9.0.6",
         "vite": "^4.0.4",
         "sass": "^1.57.1"
     }
