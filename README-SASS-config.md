@@ -83,12 +83,15 @@ $leoAnimate-global: (
 
 #### `responsive`
 
-Booleano para caso haverá ou não variações responsivas de `data-animate`.
+Booleano para caso haverá ou não variações responsivas de `data-animate`. 
+
+**OBS:** **Se você for utilizar qualquer breakpoint, essa opção deve ser obrigatoriamente *true*** para aplicar as transições conforme mencionado a abaixo nas variações responsivas do atributo.
 
 #### `properties`
 
 Lista ou mapa contendo todas as propriedades que serão animadas. Isso irá gerar o seletor com o atributo `data-animate` (e variações responsivas caso `responsive` for true) contendo a propriedade `transition-property` com os valores da lista.
 
+**OBS:**  Os valores da lista também são utilizados para gerar a classe final que anima os elementos. Portanto **toda propriedade única que foi utilizada em qualquer animação deve ser obrigatoriamente especificada aqui.**
 
 ```css
 [data-animate],
@@ -99,6 +102,7 @@ Lista ou mapa contendo todas as propriedades que serão animadas. Isso irá gera
 [data-animate-xxl] {
     transition-property: transform, opacity;
 }
+/* classe final */
 .--animated {
     transform: initial;
     opacity: initial;
@@ -174,7 +178,7 @@ Booleano para caso haverá ou não variações responsivas de `data-animate="val
 
 Cada propriedade e valor que será utilizado na animação setada.
 
-
+A variável mostrada anteriormente influencia na seguinte compilação:
 ```css
 [data-animate="fadeDown"] {
     transform: translate3d(0, -15px, 0);
