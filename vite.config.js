@@ -1,5 +1,4 @@
 import { defineConfig } from "vite";
-const packageName = "leoAnimate";
 
 export default defineConfig({
     root: "demo",
@@ -8,7 +7,7 @@ export default defineConfig({
         emptyOutDir: "true",
         lib: {
             entry: {
-                leoAnimate: `../lib/${packageName}.js`,
+                leoAnimate: "../lib/leoAnimate.js",
             },
             formats: ["es"],
         },
@@ -16,9 +15,10 @@ export default defineConfig({
             output: {
                 assetFileNames: (assetInfo) => {
                     if (assetInfo.name === "style.css")
-                        return `${packageName}.css`;
+                        return "leo-animate.css";
                     else return assetInfo.name;
                 },
+                entryFileNames: "leo-animate.js",
             },
         },
     },
