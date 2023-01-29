@@ -172,7 +172,9 @@ No objeto `LeoAnimate`, as seguintes propriedades estão disponíveis:
 | transitions                   | object   | Objeto contendo as propriedades de transição CSS que serão aplicadas para todos os elementos. Veja [personalizando transições](#personalizando-transições).
 
 
-### Atributo especial de sincronização `data-animate-sync`
+### Atributo especial de sincronização
+
+#### `data-animate-sync` e `data-animate-id`
 
 Quando a propriedade `multipleElementsDelay` do construtor estiver com um número positivo, é possível utilizar o atributo `data-animate-sync` para aplicar a um elemento o mesmo delay da animação de outro elemento.
 
@@ -186,7 +188,9 @@ Agora veja o mesmo exemplo onde o primeiro elemento / célula de cada coluna pos
 
 ![Demonstração sem atributo de sincronização](https://user-images.githubusercontent.com/72027449/215315773-83af3e43-af1e-47d0-aeef-1d0ca58d2125.gif)
 
-### Personalizando transições com `transitions` e `data-animate-{transition}`
+### Personalizando transições
+
+#### `transitions` e `data-animate-{transition}`
 
 O objeto `transitions` do construtor aplica as transições mencionadas abaixo a todos os elementos. No entanto você também pode utilizar os mesmos nomes das chaves no atributo `data-animate` em um elemento específico para substituir a transição global definida no construtor.
 
