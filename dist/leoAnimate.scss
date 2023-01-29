@@ -1,0 +1,121 @@
+$leoA-attr: "data-animate";
+$leoA-animated: "--animated";
+
+$leoAnimate-breakpoints: (
+    property: max-width,
+    sizes: (
+        xxl: 1399.98px,
+        xl: 1199.98px,
+        lg: 991.98px,
+        md: 767.98px,
+        sm: 575.98px,
+    ),
+) !default;
+
+$leoAnimate-global: (
+    responsive: true,
+    properties: (transform, opacity)
+) !default;
+
+$leoAnimate: (
+    fadeDown: (
+        responsive: true,
+        properties: (
+            transform: translate3d(0, -15px, 0),
+            opacity: 0,
+        )
+    ),
+    fadeUp: (
+        properties: (
+            transform: translate3d(0, 15px, 0),
+            opacity: 0,
+        )
+    ),
+    fadeRight: (
+        properties: (
+            transform: translate3d(-15px, 0, 0),
+            opacity: 0,
+        )
+    ),
+    fadeLeft: (
+        properties: (
+            transform: translate3d(15px, 0, 0),
+            opacity: 0,
+        )
+    ),
+) !default;
+
+// global attribute generator with NO specified value
+@mixin leoA-globalAttrs {
+    $responsive: map-get($leoAnimate-global, "responsive");
+    $properties: map-get($leoAnimate-global, "properties");
+
+    [#{$leoA-attr}] {
+        @if type-of($properties) == "map" {
+            transition-property: map-keys($properties);
+
+            @each $property, $value in $properties {
+                #{$property}: $value;
+            }
+        } @else {
+            transition-property: $properties;
+        }
+    }
+    @if $responsive {
+        $sizes: map-get($leoAnimate-breakpoints, "sizes");
+
+        @each $breakpoint, $size in $sizes {
+                [#{#{$leoA-attr}}-#{$breakpoint}] {
+                    @extend [#{$leoA-attr}];
+                }
+        }
+    }
+}
+
+// global attribute generator with specified value
+@mixin leoA-generateAttrs($selector, $properties) {
+    #{$selector} {
+        @each $property, $value in $properties {
+            #{$property}: $value;
+        }
+    }
+}
+@mixin leoA-attrs {
+    @each $animation, $options in $leoAnimate {
+        @include leoA-generateAttrs(
+            "[#{$leoA-attr}='#{$animation}']",
+            map-get($options, "properties")
+        );
+    }
+
+    @each $animation, $options in $leoAnimate {
+        @if map-get($options, "responsive") {
+            $width: map-get($leoAnimate-breakpoints, "property");
+            $sizes: map-get($leoAnimate-breakpoints, "sizes");
+
+            @each $breakpoint, $size in $sizes {
+                @media (#{$width}: #{$size}) {
+                    @include leoA-generateAttrs(
+                        "[#{$leoA-attr}-#{$breakpoint}='#{$animation}']",
+                        map-get($options, "properties")
+                    );
+                }
+            }
+        }
+    }
+}
+
+// generator of the animated class
+@mixin leoA-animatedClass {
+    $properties: map-get($leoAnimate-global, "properties");
+
+    .#{$leoA-animated} {
+        @each $property, $v in $properties {
+            #{$property}: initial;
+        }
+    }
+}
+
+@include leoA-globalAttrs;
+@include leoA-attrs;
+@include leoA-animatedClass;

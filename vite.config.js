@@ -5,6 +5,13 @@ export default defineConfig({
     root: "demo",
     build: {
         outDir: "../dist",
+        emptyOutDir: "true",
+        lib: {
+            entry: {
+                leoAnimate: `../lib/${packageName}.js`,
+            },
+            formats: ["es"],
+        },
         rollupOptions: {
             output: {
                 assetFileNames: (assetInfo) => {
@@ -13,12 +20,6 @@ export default defineConfig({
                     else return assetInfo.name;
                 },
             },
-        },
-        lib: {
-            entry: {
-                leoAnimate: `../lib/${packageName}.js`,
-            },
-            formats: ["es"],
         },
     },
 });

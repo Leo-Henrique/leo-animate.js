@@ -6,6 +6,10 @@
     "files": ["./dist"],
     "module": "./dist/leoAnimate.js",
     "license": "MIT",
+    "scripts": {
+        "bundleSASS": "scss-bundle --config scss-bundle.config.json",
+        "build": "vite build && npm run bundleSASS"
+    },
     "keywords": [
         "animations",
         "JavaScript animations",
@@ -24,6 +28,7 @@
     },
     "devDependencies": {
         "vite": "^4.0.4",
-        "sass": "^1.57.1"
+        "sass": "^1.57.1",
+        "scss-bundle": "^3.1.2"
     }
 }
