@@ -12,10 +12,14 @@
     },
     "keywords": [
         "animations",
-        "JavaScript animations",
-        "input animation",
-        "scroll animation",
-        "IntersectionObserver"
+        "input-animation",
+        "scroll-animation",
+        "responsive",
+        "intersection-observer-api",
+        "sass",
+        "scss",
+        "javascript",
+        "es6"
     ],
     "author": {
         "name": "Leonardo Henrique",
