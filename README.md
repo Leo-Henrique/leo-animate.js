@@ -40,6 +40,8 @@ Este repositório é distribuído com o [npm](https://www.npmjs.com/). Efetue a 
 
 ### Instalação
 
+(pacote temporariamente indisponível)
+
 ```bash
 npm install leo-animate.js
 ```
