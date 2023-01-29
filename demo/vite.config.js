@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
-    base: `/leoAnimate.js`,
+    base: `/leo-animate.js`,
     server: {
         fs: { allow: [".."] },
     },
