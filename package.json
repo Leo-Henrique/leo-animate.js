@@ -4,7 +4,7 @@
     "description": "Input animation and scrolling with the Intersection Observer API.",
     "type": "module",
     "files": ["./dist"],
-    "module": "./dist/leoAnimate.js",
+    "module": "./dist/leo-animate.js",
     "license": "MIT",
     "scripts": {
         "bundleSASS": "scss-bundle --config scss-bundle.config.json",
