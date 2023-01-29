@@ -69,6 +69,8 @@
     }
 }
 
-@include leoA-globalAttrs;
-@include leoA-attrs;
-@include leoA-animatedClass;
+@media (prefers-reduced-motion: no-preference) {
+    @include leoA-globalAttrs;
+    @include leoA-attrs;
+    @include leoA-animatedClass;
+}
