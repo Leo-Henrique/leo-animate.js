@@ -9,6 +9,7 @@
         "preview": "vite preview --open"
     },
     "dependencies": {
+        "leo-animate.js": "^1.0.1",
         "leo-css-reset": "^1.0.0",
         "normalize.css": "^8.0.1",
         "rfs": "^9.0.6"
