@@ -7,7 +7,7 @@
         "start": "vite --open",
         "build": "vite build",
         "preview": "vite preview --open",
-        "deploy": "git subtree push --prefix dist origin gh-pages",
+        "deploy": "git subtree push --prefix demo/dist origin gh-pages",
         "commit": "git add -A && git commit -m \"Updated demo\" && git push",
         "update": "npm run build && npm run commit && npm run deploy"
     },
