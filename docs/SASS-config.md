@@ -8,7 +8,7 @@ You can declare some variables in SASS to define the breakpoints you want to use
 After installing the package with NPM, import the scss file:
 
 ```scss
-@import "/node_modules/leo-animate.js/dist/leo-animate.scss;
+@import "/node_modules/leo-animate.js/dist/leo-animate.scss";
 ```
 
 You must define the variables mentioned below only **before** importing the previous file.
