@@ -9,8 +9,7 @@
     "scripts": {
         "bundleSASS": "scss-bundle --config scss-bundle.config.json",
         "build": "vite build && npm run bundleSASS",
-        "deploy": "git subtree push --prefix demo/dist origin gh-pages",
-        "publish": "npm publish"
+        "deploy": "git subtree push --prefix demo/dist origin gh-pages"
     },
     "keywords": [
         "animations",
