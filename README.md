@@ -29,51 +29,41 @@
 
 ## 🔎 Introduction
 
-`leo-animate.js` is a JavaScript class that uses the [IntersectionObserver API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) to apply animations on the page according to the elements are visible in the viewport.
+`leo-animate.js` is a JavaScript module that uses the [IntersectionObserver API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) to apply animations on the page according to the elements are visible in the viewport.
 
 leo-animate.js is a modern alternative to apply **scroll animations and page enter animations** asynchronously, ensuring that the user sees the defined transitions.
 
 ## 🚀 Get started
 
-This repository is distributed with [npm](https://www.npmjs.com/). Perform [npm installation](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) after installing [Node.js](https://nodejs.org/pt-br/) or use the links via CDN if you don't want to install leo-animate.js.
+This repository is distributed with the [npm package manager](https://www.npmjs.com/). Perform the [Installation of Node.js](https://nodejs.org/pt-br/) which already has npm as default package manager.
 
 ### Installation
 
 ```bash
-npm install leo-animate.js
+npm i leo-animate.js
 ```
 
-### Include Assets (CSS)
+### Include the CSS
 
-In the `<head>` of your HTML, embed via NPM:
+At the top of your stylesheet, include:
 
-```html
-<link rel="stylesheet" href="/node_modules/leo-animate.js/dist/leo-animate.css" />
+```css
+@import "/node_modules/leo-animate.js/dist/leo-animate.css"
+layer(leo-animate.js);
 ```
 
-Or via CDN:
+[layer()](https://developer.mozilla.org/en-US/docs/Web/CSS/@layer) is just to create a new cascade layer to identify the styles applied by leo-animate.js. **You must [delete it in production](https://caniuse.com/?search=%40import%20layer) or if you are importing the styles with SASS**.
 
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leo-animate.js/dist/leo-animate.css" />
-```
+### Include the JavaScript
 
-### Include Assets (JavaScript)
+At the top of your module-like script file, include:
 
-Before the closing `<body>` tag of your HTML, embed via NPM:
-
-```html
-<script src="/node_modules/leo-animate.js/dist/leo-animate.js"></script>
-```
-
-Or via CDN:
-
-```html
-<script src="https://cdn.jsdelivr.net/npm/leo-animate.js/dist/leo-animate.js"></script>
+```js
+import LeoAnimate from "/node_modules/leo-animate.js/dist/leo-animate.js"
 ```
 
 ### Instantiate the class
 
-The constructor is called **LeoAnimate**:
 ```js
 new LeoAnimate();
 ```
