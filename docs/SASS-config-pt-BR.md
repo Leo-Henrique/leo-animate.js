@@ -1,21 +1,21 @@
 # 📋 SASS config
 
-[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/Leo-Henrique/leo-animate.js/blob/main/README-SASS-config.md)
-[![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg)](https://github.com/Leo-Henrique/leo-animate.js/blob/main/README-SASS-config-pt-BR.md)
+[![en](https://img.shields.io/badge/idioma-en-red.svg)](https://github.com/Leo-Henrique/leo-animate.js/blob/main/docs/SASS-config.md)
+[![pt-br](https://img.shields.io/badge/idioma-pt--br-green.svg)](https://github.com/Leo-Henrique/leo-animate.js/blob/main/docs/SASS-config-pt-BR.md)
 
-You can declare some variables in SASS to define the breakpoints you want to use in your animations or define other types of animations that suit you best.
+Você pode declarar algumas variáveis no SASS para definir os breakpoints que deseja utilizar nas suas animações ou definir outros tipos de animações que mais lhe convém.
 
-After installing the package with NPM, import the scss file:
+Após ter instalado o pacote com o NPM, importe o arquivo scss:
 
 ```scss
 @import "/node_modules/leo-animate.js/dist/leo-animate.scss;
 ```
 
-You must define the variables mentioned below only **before** importing the previous file.
+Você deve definir as variáveis citadas a seguir somente **antes** da importação do arquivo anterior.
 
 ## `$leoAnimate-breakpoints`
 
-A map containing the media query definitions that will be available for use with the `data-animate` attribute.
+Um mapa contendo as definições dos media queries que estarão disponíveis para serem usados com o atributo `data-animate`.
 
 ```scss
 $leoAnimate-breakpoints: (
@@ -32,13 +32,13 @@ $leoAnimate-breakpoints: (
 
 ### `property`
 
-Property used for all media queries.
+Propriedade utilizada para todos os media queries.
 
 ### `sizes`
 
-Each key in this map will have its name compiled with the `data-animate` attribute (data-animate-*key*) within the media query specified in the value.
+Cada chave deste mapa terá seu nome compilado com o atributo `data-animate` (data-animate-*key*) dentro do media query especificado no valor.
 
-The compilation of breakpoints will be compiled in the order they are set. If you use `min-width` in media queries you might want to reverse their order.
+A compilação dos breakpoints irá ser compilada na ordem que eles estão setados. Se você utiliza `min-width` nos media queries talvez você possa querer inverter a ordem deles.
 
 ```css
 @media (max-width: 1399.98px) {
@@ -75,7 +75,7 @@ The compilation of breakpoints will be compiled in the order they are set. If yo
 
 ### `$leoAnimate-global`
 
-Map that influences compilation of the pure `data-animate` attribute (no values specified), along with the final class added to animate the elements.
+Mapa que influencia a compilação do atributo `data-animate` puro (sem valores especificados), junto com a classe final adicionada para animar os elementos.
 
 ```scss
 $leoAnimate-global: (
@@ -86,15 +86,15 @@ $leoAnimate-global: (
 
 #### `responsive`
 
-Boolean for whether or not there will be responsive variations of `data-animate`.
+Booleano para caso haverá ou não variações responsivas de `data-animate`. 
 
-**OBS:** **If you are going to use any breakpoint, this option must be *true*** to apply the transitions as mentioned below in the responsive variations of the attribute.
+**OBS:** **Se você for utilizar qualquer breakpoint, essa opção deve ser obrigatoriamente *true*** para aplicar as transições conforme mencionado a abaixo nas variações responsivas do atributo.
 
 #### `properties`
 
-List or map containing all properties that will be animated. This will generate the selector with the `data-animate` attribute (and responsive variations if `responsive` is true) containing the `transition-property` property with the list values.
+Lista ou mapa contendo todas as propriedades que serão animadas. Isso irá gerar o seletor com o atributo `data-animate` (e variações responsivas caso `responsive` for true) contendo a propriedade `transition-property` com os valores da lista.
 
-**NOTE:** The list values are also used to generate the final class that animates the elements. Therefore **every unique property that was used in any animation must be specified here.**
+**OBS:**  Os valores da lista também são utilizados para gerar a classe final que anima os elementos. Portanto **toda propriedade única que foi utilizada em qualquer animação deve ser obrigatoriamente especificada aqui.**
 
 ```css
 [data-animate],
@@ -105,14 +105,14 @@ List or map containing all properties that will be animated. This will generate 
 [data-animate-xxl] {
     transition-property: transform, opacity;
 }
-/* final class */
+/* classe final */
 .--animated {
     transform: initial;
     opacity: initial;
 }
 ```
 
-If a map is passed as key and value in `properties`, the keys will also be set as selector properties.
+Se um mapa for passado como chave e valor em `properties`, as chaves também serão setadas como propriedades do seletor.
 
 **scss**
 ```scss
@@ -138,7 +138,7 @@ $leoAnimate-global: (
 
 ### `$leoAnimate`
 
-Map that groups each desired animation and influences the compilation of the `data-animate` attribute with specified value.
+Mapa que agrupa cada animação desejada e influencia a compilação do atributo `data-animate` com valor especificado.
 
 ```scss
 $leoAnimate: (
@@ -171,16 +171,16 @@ $leoAnimate: (
 ```
 #### `$leoAnimate: (key: value)`
 
-The key represents the name of the value in the `data-animate.` attribute.
+A chave representa o nome do valor no atributo `data-animate.`
 
 #### `$leoAnimate: (key: (responsive: value))`
-Boolean for whether or not there will be responsive variations of `data-animate="value"`.
+Booleano para caso haverá ou não variações responsivas de `data-animate="value"`. 
 
 #### `$leoAnimate: (key: (properties: (property: value)))`
 
-Each property and value that will be used in the set animation.
+Cada propriedade e valor que será utilizado na animação setada.
 
-The variable shown above influences the following compilation:
+A variável mostrada anteriormente influencia na seguinte compilação:
 ```css
 [data-animate="fadeDown"] {
     transform: translate3d(0, -15px, 0);

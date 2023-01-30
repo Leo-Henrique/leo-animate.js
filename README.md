@@ -25,7 +25,7 @@
 </div>
 
 [![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/Leo-Henrique/leo-animate.js/blob/main/README.md)
-[![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg)](https://github.com/Leo-Henrique/leo-animate.js/blob/main/README-pt-BR.md)
+[![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg)](https://github.com/Leo-Henrique/leo-animate.js/blob/main/docs/README-pt-BR.md)
 
 ## 🔎 Introduction
 
@@ -62,13 +62,13 @@ Or via CDN:
 Before the closing `<body>` tag of your HTML, embed via NPM:
 
 ```html
-<script src="/node_modules/leo-animate.js/dist/leo-animate.js" /></script>
+<script src="/node_modules/leo-animate.js/dist/leo-animate.js"></script>
 ```
 
 Or via CDN:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/leo-animate.js/dist/leo-animate.js" /></script>
+<script src="https://cdn.jsdelivr.net/npm/leo-animate.js/dist/leo-animate.js"></script>
 ```
 
 ### Instantiate the class

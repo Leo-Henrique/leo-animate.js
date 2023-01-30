@@ -25,7 +25,7 @@
 </div>
 
 [![en](https://img.shields.io/badge/idioma-en-red.svg)](https://github.com/Leo-Henrique/leo-animate.js/blob/main/README.md)
-[![pt-br](https://img.shields.io/badge/idioma-pt--br-green.svg)](https://github.com/Leo-Henrique/leo-animate.js/blob/main/README-pt-BR.md)
+[![pt-br](https://img.shields.io/badge/idioma-pt--br-green.svg)](https://github.com/Leo-Henrique/leo-animate.js/blob/main/docs/README-pt-BR.md)
 
 ## 🔎 Introdução
 
@@ -63,13 +63,13 @@ Ou via CDN:
 Antes da tag de fechamento `<body>` do seu HTML, incorpore via NPM:
 
 ```html
-<script src="/node_modules/leo-animate.js/dist/leo-animate.js" /></script>
+<script src="/node_modules/leo-animate.js/dist/leo-animate.js"></script>
 ```
 
 Ou via CDN:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/leo-animate.js/dist/leo-animate.js" /></script>
+<script src="https://cdn.jsdelivr.net/npm/leo-animate.js/dist/leo-animate.js"></script>
 ```
 
 ### Instancie a classe
