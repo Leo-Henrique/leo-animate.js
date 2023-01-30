@@ -1,6 +1,6 @@
 {
     "name": "leo-animate.js",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Input animation and scrolling with the Intersection Observer API.",
     "type": "module",
     "files": ["./dist"],
@@ -9,7 +9,8 @@
     "scripts": {
         "bundleSASS": "scss-bundle --config scss-bundle.config.json",
         "build": "vite build && npm run bundleSASS",
-        "deploy": "git subtree push --prefix demo/dist origin gh-pages"
+        "deploy": "git subtree push --prefix demo/dist origin gh-pages",
+        "publish": "npm publish"
     },
     "keywords": [
         "animations",
