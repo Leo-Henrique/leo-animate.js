@@ -27,6 +27,10 @@
 [![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/Leo-Henrique/leo-animate.js/blob/main/README.md)
 [![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg)](https://github.com/Leo-Henrique/leo-animate.js/blob/main/docs/README-pt-BR.md)
 
+**⚠️ Warning**
+
+This readme was written primarily with Google Translate. I'll be happy if you make an exception for any grammatical errors!
+
 ## 🔎 Introduction
 
 `leo-animate.js` is a JavaScript module that uses the [IntersectionObserver API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) to apply animations on the page according to the elements are visible in the viewport.

@@ -3,6 +3,10 @@
 [![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/Leo-Henrique/leo-animate.js/blob/main/docs/SASS-config.md)
 [![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg)](https://github.com/Leo-Henrique/leo-animate.js/blob/main/docs/SASS-config-pt-BR.md)
 
+**⚠️ Warning**
+
+This readme was written primarily with Google Translate. I'll be happy if you make an exception for any grammatical errors!
+
 You can declare some variables in SASS to define the breakpoints you want to use in your animations or define other types of animations that suit you best.
 
 After installing the package with NPM, import the scss file:
