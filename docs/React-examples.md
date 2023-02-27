@@ -6,7 +6,7 @@ This readme was written primarily with Google Translate. I'll be happy if you ma
 
 ## Usage in the main component
 
-As leo-animate.js uses *element selection through `document`*, you need to use React`s `useEffect` hook in the component you want to use animations.
+As leo-animate.js uses *element selection through the `document`*, you need to use React `useEffect` hook on the component you want to use the animations.
 
 This component will usually be your main component (usually named `App`):
 
