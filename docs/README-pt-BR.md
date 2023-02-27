@@ -68,10 +68,7 @@ import LeoAnimate from "/node_modules/leo-animate.js/dist/leo-animate.js"
 new LeoAnimate();
 ```
 
-Em React, envolva sobre um `useEffect` hook:
-```js
-React.useEffect(() => new LeoAnimate());
-```
+Você pode querer consultar alguns [exemplos de uso com o React!](https://github.com/Leo-Henrique/leo-animate.js/blob/main/docs/React-examples-pt-BR.md)
 
 ### Uso
 
@@ -150,7 +147,7 @@ leo-animate.js garante que nenhum estilo das animações e o próprio JavaScript
 
 ## 📋 Opções do construtor
 
-O construtor `LeoAnimate` recebe um objeto opcional como argumento que permite configurar como as animações irão ocorrer. Se você deseja configurar outros tipos de animações ou personalizar os breakpoints, [configure o SASS de leo-animate.js](https://github.com/Leo-Henrique/leo-animate.js/blob/main/README-SASS-config-pt-BR.md).
+O construtor `LeoAnimate` recebe um objeto opcional como argumento que permite configurar como as animações irão ocorrer. Se você deseja configurar outros tipos de animações ou personalizar os breakpoints, [configure o SASS de leo-animate.js](https://github.com/Leo-Henrique/leo-animate.js/blob/main/docs/SASS-config-pt-BR.md).
 
 No objeto `LeoAnimate`, as seguintes propriedades estão disponíveis:
 
