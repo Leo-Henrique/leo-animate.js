@@ -73,7 +73,7 @@ A compilação dos breakpoints irá ser compilada na ordem que eles estão setad
 }
 ```
 
-### `$leoAnimate-global`
+## `$leoAnimate-global`
 
 Mapa que influencia a compilação do atributo `data-animate` puro (sem valores especificados), junto com a classe final adicionada para animar os elementos.
 
@@ -84,13 +84,13 @@ $leoAnimate-global: (
 ) !default;
 ```
 
-#### `responsive`
+### `responsive`
 
 Booleano para caso haverá ou não variações responsivas de `data-animate`. 
 
 **OBS:** **Se você for utilizar qualquer breakpoint, essa opção deve ser obrigatoriamente *true*** para aplicar as transições conforme mencionado a abaixo nas variações responsivas do atributo.
 
-#### `properties`
+### `properties`
 
 Lista ou mapa contendo todas as propriedades que serão animadas. Isso irá gerar o seletor com o atributo `data-animate` (e variações responsivas caso `responsive` for true) contendo a propriedade `transition-property` com os valores da lista.
 
@@ -136,7 +136,7 @@ $leoAnimate-global: (
 }
 ```
 
-### `$leoAnimate`
+## `$leoAnimate`
 
 Mapa que agrupa cada animação desejada e influencia a compilação do atributo `data-animate` com valor especificado.
 
@@ -169,14 +169,14 @@ $leoAnimate: (
     ),
 ) !default;
 ```
-#### `$leoAnimate: (key: value)`
+### `$leoAnimate: (key: value)`
 
 A chave representa o nome do valor no atributo `data-animate.`
 
-#### `$leoAnimate: (key: (responsive: value))`
+### `$leoAnimate: (key: (responsive: value))`
 Booleano para caso haverá ou não variações responsivas de `data-animate="value"`. 
 
-#### `$leoAnimate: (key: (properties: (property: value)))`
+### `$leoAnimate: (key: (properties: (property: value)))`
 
 Cada propriedade e valor que será utilizado na animação setada.
 
