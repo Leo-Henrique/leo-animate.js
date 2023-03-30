@@ -1,6 +1,6 @@
 {
     "name": "leo-animate.js",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "description": "Input animation and scrolling with the Intersection Observer API.",
     "type": "module",
     "files": ["./dist"],
