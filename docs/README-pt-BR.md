@@ -89,6 +89,8 @@ data-animate-lg="fadeDown">
 </p>
 ```
 
+OBS: Se você deseja usar apenas os atributos responsivos, deve especificar ao menos `data-animate` sem nenhum valor para aplicar as animações.
+
 ## 💻 Recursos
 
 ### Descarte o evento `onscroll`

@@ -93,6 +93,8 @@ data-animate-lg="fadeDown">
 </p>
 ```
 
+NOTE: If you want to use only the responsive attributes, you must specify at least `data-animate` with no value to apply the animations.
+
 ## 💻 Features
 
 ### Discard the `onscroll` event
